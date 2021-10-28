@@ -1,0 +1,27 @@
+package com.example.citiesapi.utils
+
+import javax.persistence.AttributeConverter
+import javax.persistence.Converter
+
+import org.springframework.data.geo.Point
+
+@Converter
+class PointConverter2 implements AttributeConverter<Point, String> {
+	
+	final String SEPARATOR = ","
+	final String TRIM_START = "("
+	final String TRIM_END = ")"
+
+	@Override
+	def String convertToDatabaseColumn(Point attribute) {
+		// TODO Auto-generated method stub
+		null
+	}
+
+	@Override
+	def Point convertToEntityAttribute(String dbData) {
+		// TODO Auto-generated method stub
+		null
+	}
+	
+}

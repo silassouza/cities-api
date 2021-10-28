@@ -1,0 +1,10 @@
+
+server.port=${PORT:8080}
+
+spring.datasource.url=jdbc:postgresql://ec2-52-86-123-180.compute-1.amazonaws.com:5432/dbn7f5a7gastqt
+spring.datasource.username=afljxkhiedbjpa
+spring.datasource.password=7c2c467d9337814c007b1d22ecf11e3fbaba70ee294b8293a7e53cf81584ff58
+
+#spring.jpa.properties.hibernate.dialect=org.hibernate.spatial.dialect.postgis.PostgisPG10Dialect
+
+spring.jpa.properties.hibernate.dialect=org.hibernate.spatial.dialect.postgis.PostgisDialect
