@@ -14,29 +14,29 @@ import com.example.citiesapi.cities.services.EarthRadius
 @RequestMapping("/distances")
 class DistanceResource {
 
-	Logger log = LoggerFactory.getLogger(DistanceResource.class);
+	Logger log = LoggerFactory.getLogger(DistanceResource.class)
 
-	def DistanceService service;
+	def DistanceService service
 
 	DistanceResource(DistanceService service) {
-		this.service = service;
+		this.service = service
 	}
 
 	@GetMapping("/by-points")
 	def byPoints(@RequestParam(name = "from") Long city1, @RequestParam(name = "to") Long city2) {
-		log.info("byPoints");
-		service.distanceByPointsInMiles(city1, city2);
+		log.info("byPoints")
+		service.distanceByPointsInMiles(city1, city2)
 	}
 
 	@GetMapping("/by-cube")
 	def byCube(@RequestParam(name = "from") Long city1, @RequestParam(name = "to") Long city2) {
-		log.info("byCube");
-		service.distanceByCubeInMeters(city1, city2);
+		log.info("byCube")
+		service.distanceByCubeInMeters(city1, city2)
 	}
 
 	@GetMapping("/by-math")
 	def byMath(@RequestParam(name = "from") Long city1, @RequestParam(name = "to") Long city2, @RequestParam EarthRadius unit) {
-		log.info("byMath");
-		service.distanceUsingMath(city1, city2, unit);
+		log.info("byMath")
+		service.distanceUsingMath(city1, city2, unit)
 	}
 }

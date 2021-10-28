@@ -13,7 +13,7 @@ import com.example.citiesapi.cities.repositories.CityRepository
 @RequestMapping("cities")
 class CityResource {
 
-	def CityRepository repository;
+	def CityRepository repository
 
 	CityResource(CityRepository repository) {
 		this.repository = repository
@@ -21,6 +21,6 @@ class CityResource {
 
 	@GetMapping
 	def cities(Pageable page) {
-		repository.findAll(page);
+		repository.findAll(page)
 	}
 }
