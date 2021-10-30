@@ -1,7 +1,0 @@
-package com.example.citiesapi.utils
-
-import javax.persistence.Converter
-
-@Converter
-class PointConverter2 {
-}
